@@ -27,9 +27,9 @@ declare class FCUUID extends NSObject {
 
 	static uuidValueIsValid(uuidValue: string): boolean;
 
-	static uuidsOfUserDevices(): NSArray<any>;
+	static uuidsOfUserDevices(): NSArray;
 
-	static uuidsOfUserDevicesExcludingCurrentDevice(): NSArray<any>;
+	static uuidsOfUserDevicesExcludingCurrentDevice(): NSArray;
 }
 
 declare var FCUUIDVersionNumber: number;
