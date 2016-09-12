@@ -1,0 +1,52 @@
+{
+	"name": "nativescript-fcuuid",
+	"version": "1.0.1",
+	"description": "A NativeScript plugin that wraps FCUUID for iOS",
+	"main": "fcuuid.js",
+	"typescript": {
+		"definitions": [
+			"FCUUID.d.ts"
+		]
+	},
+	"nativescript": {
+		"platforms": {
+			"ios": "2.0.0"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/roblav96/nativescript-fcuuid.git"
+	},
+	"keywords": [
+		"nativescript",
+		"fcuuid",
+		"ecosystem:nativescript",
+		"nativescript-ios"
+	],
+	"author": {
+		"name": "Rob Laverty",
+		"email": "roblav96@gmail.com"
+	},
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/roblav96/nativescript-fcuuid/blob/master/LICENSE"
+	},
+	"bugs": {
+		"url": "https://github.com/roblav96/nativescript-fcuuid/issues"
+	},
+	"homepage": "https://github.com/roblav96/nativescript-fcuuid",
+	"readmeFilename": "README.md",
+	"scripts": {
+		"build": "tsc",
+		"demo.ios": "npm run preparedemo && cd demo && tns emulate ios",
+		"demo.android": "npm run preparedemo && cd demo && tns run android",
+		"preparedemo": "npm run build && cd demo && tns plugin remove nativescript-fcuuid && tns plugin add .. && tns install",
+		"setup": "npm i && cd demo && npm i && cd .. && npm run build && cd demo && tns plugin add .. && cd .."
+	},
+	"devDependencies": {
+		"tns-core-modules": "^2.2.0",
+		"tns-platform-declarations": "^2.2.0",
+		"typescript": "^1.8.10"
+	}
+}
+
