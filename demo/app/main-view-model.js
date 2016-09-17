@@ -4,7 +4,7 @@ var HelloWorldModel = (function (_super) {
     __extends(HelloWorldModel, _super);
     function HelloWorldModel() {
         _super.call(this);
-        this.message = 'FCUUID';
+        this.message = 'FCUUID: ' + FCUUID.uuidForDevice();
     }
     return HelloWorldModel;
 }(observable_1.Observable));
